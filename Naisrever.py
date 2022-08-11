@@ -1,5 +1,4 @@
 def translate(sentence):
-    sentence = "This 'Naisrever' program reverses the order of words in a sentence, and some other things."
     # Now reverse the sentence
     sentence = sentence[::-1]
     # if the first letter is a mark, move it to the end
