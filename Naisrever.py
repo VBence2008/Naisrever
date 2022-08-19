@@ -1,4 +1,4 @@
-def translate(sentence):
+def translate_text(sentence):
     # Now reverse the sentence
     sentence = sentence[::-1]
     # if the first letter is a mark, move it to the end
@@ -23,4 +23,18 @@ def translate(sentence):
     return sentence
 
 
-print(translate("This 'Naisrever' program reverses the order of words in a sentence, and some other things."))
+def translate_file(source, output):
+    with open(source, 'r', encoding='utf-8') as file:
+        text = file.read()
+        text = translate_text(text)
+        with open(output, 'w', encoding='utf-8') as file:
+            file.write(text)
+        file.close()
+
+
+translate_file("C:/Users/Bence/Downloads/Input.txt",
+               "C:/Users/Bence/Downloads/Output.txt")
+
+text = "File translation to 'Naisrever' was successfully completed!"
+result = translate_text(text)
+print(result)
