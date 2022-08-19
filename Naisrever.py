@@ -13,6 +13,9 @@ def translate_text(sentence):
     sentence = sentence[0].upper() + sentence[1:]
     # replace the marks
     sentence = sentence.replace(" ,", ", ")
+    sentence = sentence.replace(" !", "! ")
+    sentence = sentence.replace(" ?", "? ")
+    sentence = sentence.replace(" .", ". ")
     # Now go through each word and if it contains two quotes, reverse the word
     words = sentence.split(" ")
     for i in range(len(words)):
